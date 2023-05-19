@@ -7,7 +7,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact - Floral Template</title>
+<title>Shopping Cart - Floral Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -57,20 +57,20 @@ function clearText(field)
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-           		<li><a href="products.html">Products</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="products.php">Products</a>
                     <ul>
                         <li><a href="#subpage1">Sub Page One</a></li>
                         <li><a href="#subpage2">Sub Page Two</a></li>
                         <li><a href="#subpage3">Sub Page Three</a></li>
                         <li><a href="#subpage4">Sub Page Four</a></li>
                         <li><a href="#subpage5">Sub Page Five</a></li>
-                  </ul>
+                  	</ul>
                 </li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="contact.html" class="selected">Contact</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="faqs.php">FAQs</a></li>
             </ul>
             <div id="templatemo_search">
                 <form action="#" method="get">
@@ -118,70 +118,45 @@ function clearText(field)
     </div>
     
     <div id="content" class="right">
-		<h2>Contact</h2>
-        <p>Morbi adipiscing gravida lacus, id rhoncus neque sollicitudin ac. Sed eget purus vitae enim pulvinar viverra. Cras ut elit et ligula blandit eleifend. Nam at odio sem, sed tempor justo.</p>
+    	<h2>Shopping Cart</h2>
+		<table width="700" border="0" cellpadding="5" cellspacing="0">
+          	<tr bgcolor="#395015">
+                <th width="168" align="left">Item</th> 
+                <th width="188" align="left">Description</th> 
+                <th width="60" align="center">Quantity</th> 
+                <th width="80" align="right">Price</th> 
+                <th width="80" align="right">Total</th> 
+                <th width="64"> </th>
+          	</tr>
+            <tr bgcolor="#41581B">
+                <td><img src="images/product/01.jpg" alt="flower image 1" /></td> 
+                <td>Ut eu feugiat</td> 
+                <td align="center"><input name="quantity1" type="text" id="quantity1" value="1" size="6" maxlength="2" /> </td>
+                <td align="right">$240</td> 
+                <td align="right">$240</td>
+                <td align="center"> <a href="#"><img src="images/remove.png" alt="remove" /><br />Remove</a> </td>
+            </tr>
+      <tr bgcolor="#41581B">
+                <td><img src="images/product/02.jpg" alt="flower image 2" /> </td>
+                <td>Donec Est Nisi (Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>)</td> 
+                <td align="center"><input name="quantity2" type="text" id="quantity2" value="2" size="6" maxlength="2" />  </td>
+                <td align="right">$160</td>
+                <td align="right">$320</td>
+                <td align="center"> <a href="#"><img src="images/remove.png" alt="remove" /><br />Remove</a>  </td>
+            </tr>
+<tr bgcolor="#41581B">
+                <td colspan="3">Have you modified item quantities? Please <a href="shoppingcart.php"><strong>Update</strong></a> the Cart.&nbsp;&nbsp;</td>
+                <td align="right"><h4>All Total:</h4></td>
+                <td align="right"><h4>$560</h4></td>
+                <td> </td>
+            </tr>
+        </table>
+		<div class="cleaner h20"></div>
+        <div class="right"><a href="checkout.php" class="button">checkout</a></div>
         <div class="cleaner h20"></div>
-        <div class="col col13">
-            <h4>Mailing Address</h4>
-        	<h6><strong>Office One</strong></h6>
-            800-220 Fusce nec ante at odio, <br />
-            In vitae lacus in purus, 66770<br />
-            Diam a mollis tempor<br /><br />
-            
-			<strong>Phone:</strong> 010-440-5500<br />
-            <strong>Email:</strong> <a href="mailto:contact@company.com">contact@company.com</a> <br />
-            
-            <div class="cleaner h20"></div>
-            
-            <h6><strong>Office Two</strong></h6>
-            600-110 Duis lacinia, <br />
-            Ullamcorper mattis, 88770<br />
-            Maecenas a diam, mollis magna<br /><br />
-            
-			<strong>Phone:</strong> 020-660-8800<br />
-            <strong>Email:</strong> <a href="mailto:info@company.com">info@company.com</a> <br />
-
-            Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>
-		</div>
-        <div class="col col23 no_margin_right">
-        	<div class="map_border">
-                <iframe width="430" height="340" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Central+Park,+New+York,+NY,+USA&amp;aq=0&amp;sll=14.093957,1.318359&amp;sspn=69.699334,135.263672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=Central+Park,+New+York,+NY,+USA&amp;ll=40.778265,-73.96988&amp;spn=0.033797,0.06403&amp;t=m&amp;output=embed"></iframe></div>
-			
-        </div>
-        <div class="cleaner h40"></div>
-        <div id="contact_form">
-           <form method="post" name="contact" action="#">
-           		<div class="col col13">
-                
-                    <label for="name">Name:</label> 
-              		<input name="name" type="text" class="input_field" id="name" maxlength="40" />
-                	<div class="cleaner h10"></div>
-                    <label for="email">Email:</label> 
-          			<input name="email" type="text" class="required input_field" id="email" maxlength="40" />
-                	<div class="cleaner h10"></div>
-                    <label for="phone">Phone:</label> 
-        			<input name="phone" type="text" class="input_field" id="phone" maxlength="20" />
-                	<div class="cleaner h10"></div>
-                	
-                
-			 	</div>
-                
-                <div class="col col23 no_margin_right">
-                    <label for="message">Message:</label> 
-               	  	<textarea id="message" name="message" rows="0" cols="0" class="required"></textarea>
-                    <div class="cleaner h10"></div>
-                    <input type="submit" class="submit_btn left" name="submit" id="submit" value="Send" />
-                    <input type="reset" class="submit_btn submit_right" name="reset" id="reset" value="Reset" />
-				</div>
-                
-                
-            </form>
-        </div>
-        <div class="cleaner h40"></div>        
         <div class="blank_box">
         	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
-        </div>  
-        <div class="cleaner"></div>  
+        </div>    
     </div>
     <div class="cleaner"></div>
 </div> <!-- END of main -->
@@ -195,7 +170,7 @@ function clearText(field)
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
     </div>
 	<div class="footer_right">
-		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="faqs.html">FAQs</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>
+		<p><a href="index.php">Home</a> | <a href="products.php">Products</a> | <a href="about.php">About</a> | <a href="faqs.php">FAQs</a> | <a href="checkout.php">Checkout</a> | <a href="contact.php">Contact</a></p>
         <p>Copyright © 2084 <a href="#">Company Name</a></p>
 	</div>
     <div class="cleaner"></div>

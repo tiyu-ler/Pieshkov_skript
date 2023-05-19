@@ -7,7 +7,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Product Detail - Floral Template</title>
+<title>Products - Floral Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -46,9 +46,6 @@ function clearText(field)
 
 </script>
 
-<script type="text/javascript" src="js/jquery-1-4-2.min.js"></script> 
-<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
-<script type="text/JavaScript" src="js/slimbox2.js"></script> 
 
 </head>
 
@@ -60,20 +57,20 @@ function clearText(field)
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="products.php" class="selected">Products</a>
                     <ul>
                         <li><a href="#subpage1">Sub Page One</a></li>
                         <li><a href="#subpage2">Sub Page Two</a></li>
                         <li><a href="#subpage3">Sub Page Three</a></li>
                         <li><a href="#subpage4">Sub Page Four</a></li>
                         <li><a href="#subpage5">Sub Page Five</a></li>
-                  	</ul>
+                  </ul>
                 </li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="faqs.php">FAQs</a></li>
             </ul>
             <div id="templatemo_search">
                 <form action="#" method="get">
@@ -84,7 +81,7 @@ function clearText(field)
             </div>
             <br style="clear: left" />
         </div> <!-- end of templatemo_menu -->
-       
+        
     </div> <!-- END of header -->
 </div> <!-- END of header wrapper -->
 <div id="templatemo_main_wrapper">
@@ -121,31 +118,87 @@ function clearText(field)
     </div>
     
     <div id="content" class="right">
-      	<h2>Product Detail</h2>
-        <div class="content_half left">
-        	<a  rel="lightbox" href="images/product/image_01_l.jpg"><img src="images/product/image_01.jpg" alt="yellow flowers" /></a>
+		<h2>Products</h2>
+        <p>Cras aliquam, mi nec imperdiet volutpat, ligula est consequat odio, eu auctor urna augue eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum nec nunc ac hendrerit. Morbi lacinia placerat diam sit amet fringilla. Integer accumsan suscipit suscipit. Mauris non nunc sit amet turpis pharetra mattis. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+  <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/01.jpg" alt="floral set 1" /></a>
+      		<h3>Ut eu feugiat</h3>
+            <p class="product_price">$240</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>        	
+        <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/02.jpg" alt="flowers 2" /></a>
+            <h3>Donec Est Nisi</h3>
+          	<p class="product_price">$160</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>        	
+        <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/03.jpg" alt="floral 3" /></a>
+            <h3>Tristique Vitae</h3>
+          <p class="product_price">$140</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>      	
+        <div class="product_box no_margin_right">
+            <a href="productdetail.php"><img src="images/product/04.jpg" alt="flowers 4" /></a>
+            <h3>Hendrerit Eu</h3>
+            <p class="product_price">$320</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
         </div>
-            <div class="content_half right">
-                <table>
-                    <tr>
-                        <td width="130">Price:</td>
-                        <td width="84">$240</td>
-                    </tr>
-                    <tr>
-                        <td>Availability:</td>
-                        <td><strong>In Stock</strong></td>
-                    </tr>
-                    <tr><td>Quantity</td><td><input type="text" value="1" size="6" maxlength="2" /></td></tr>
-                </table>
-                <div class="cleaner h20"></div>
-                <a href="shoppingcart.html" class="button">Add to Cart</a>
-			</div>
-            <div class="cleaner h40"></div>
-            
-            <h4>Product Description</h4>
-            <p>Sed ullamcorper nunc at magna egestas fermentum. Etiam turpis orci, condimentum luctus orci id, elementum vulputate nunc. Donec diam turpis, iaculis vitae feugiat ac, molestie at odio. Nullam tincidunt est ac sagittis ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper quam sit amet turpis rhoncus id venenatis tellus sollicitudin. Fusce ullamcorper, dolor non mollis pulvinar, turpis tortor commodo nisl, et semper lectus augue blandit tellus. Quisque id bibendum libero. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
-            <div class="cleaner h40"></div>
+        
+        <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/05.jpg" alt="floral set 5" /></a>
+            <h3>Tincidunt Nisi</h3>
+          	<p class="product_price">$150</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>        	
+        <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/07.jpg" alt="flowers 7" /></a>
+            <h3>Curabitur et turpis</h3>
+            <p class="product_price">$110</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>        	
+        <div class="product_box">
+            <a href="productdetail.php"><img src="images/product/06.jpg" alt="flower set 6" /></a>
+            <h3>Mauris consectetur</h3>
+            <p class="product_price">$130</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>        	
+        <div class="product_box no_margin_right">
+            <a href="productdetail.php"><img src="images/product/08.jpg" alt="floral 8" /></a>
+            <h3>Proin volutpat</h3>
+            <p class="product_price">$170</p>
+            <p class="add_to_cart">
+                <a href="productdetail.php">Detail</a>
+                <a href="shoppingcart.php">Add to Cart</a>
+            </p>
+        </div>
         <div class="blank_box">
+        	<a href="#" class="button left">Previous</a> 
+            <a href="#" class="button right">Next Page</a>
+        </div>
+        <div class="cleaner h20"></div>
+    	<div class="blank_box">
         	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
         </div>    
     </div>
@@ -161,7 +214,7 @@ function clearText(field)
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
     </div>
 	<div class="footer_right">
-		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="faqs.html">FAQs</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>
+		<p><a href="index.php">Home</a> | <a href="products.php">Products</a> | <a href="about.php">About</a> | <a href="faqs.php">FAQs</a> | <a href="checkout.php">Checkout</a> | <a href="contact.php">Contact</a></p>
         <p>Copyright © 2084 <a href="#">Company Name</a></p>
 	</div>
     <div class="cleaner"></div>

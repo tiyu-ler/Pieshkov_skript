@@ -56,9 +56,9 @@ function clearText(field)
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="selected">About</a></li>
-                <li><a href="products.html">Products</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php" class="selected">About</a></li>
+                <li><a href="products.php">Products</a>
                     <ul>
                         <li><a href="#subpage1">Sub Page One</a></li>
                         <li><a href="#subpage2">Sub Page Two</a></li>
@@ -67,9 +67,9 @@ function clearText(field)
                         <li><a href="#subpage5">Sub Page Five</a></li>
                   	</ul>
                 </li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="faqs.php">FAQs</a></li>
             </ul>
             <div id="templatemo_search">
                 <form action="#" method="get">
@@ -145,7 +145,7 @@ function clearText(field)
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
     </div>
 	<div class="footer_right">
-		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="faqs.html">FAQs</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>
+		<p><a href="index.php">Home</a> | <a href="products.php">Products</a> | <a href="about.php">About</a> | <a href="faqs.php">FAQs</a> | <a href="checkout.php">Checkout</a> | <a href="contact.php">Contact</a></p>
         <p>Copyright © 2084 <a href="#">Company Name</a></p>
 	</div>
     <div class="cleaner"></div>

@@ -94,15 +94,15 @@
 			var nivoCaption = $('.nivo-caption', slider);
 			if(vars.currentImage.attr('title') != '' && vars.currentImage.attr('title') != undefined){
 				var title = vars.currentImage.attr('title');
-				if(title.substr(0,1) == '#') title = $(title).html();	
+				if(title.substr(0,1) == '#') title = $(title).php();	
 
 				if(nivoCaption.css('display') == 'block'){
 					nivoCaption.find('p').fadeOut(settings.animSpeed, function(){
-						$(this).html(title);
+						$(this).php(title);
 						$(this).fadeIn(settings.animSpeed);
 					});
 				} else {
-					nivoCaption.find('p').html(title);
+					nivoCaption.find('p').php(title);
 				}					
 				nivoCaption.fadeIn(settings.animSpeed);
 			} else {

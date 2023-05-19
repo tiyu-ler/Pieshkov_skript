@@ -28,15 +28,15 @@ detectie6: document.all && !window.XMLHttpRequest,
 
 getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
 	var $menucontainer=$('#'+setting.contentsource[0]) //reference empty div on page that will hold menu
-	$menucontainer.html("Loading Menu...")
+	$menucontainer.php("Loading Menu...")
 	$.ajax({
 		url: setting.contentsource[1], //path to external menu file
 		async: true,
 		error:function(ajaxrequest){
-			$menucontainer.html('Error fetching content. Server Response: '+ajaxrequest.responseText)
+			$menucontainer.php('Error fetching content. Server Response: '+ajaxrequest.responseText)
 		},
 		success:function(content){
-			$menucontainer.html(content)
+			$menucontainer.php(content)
 			ddsmoothmenu.buildmenu($, setting)
 		}
 	})

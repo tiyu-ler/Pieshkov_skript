@@ -7,7 +7,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Check Out - Floral Template</title>
+<title>FAQs - Floral Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -46,6 +46,7 @@ function clearText(field)
 
 </script>
 
+
 </head>
 
 <body>
@@ -56,9 +57,9 @@ function clearText(field)
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="products.php">Products</a>
                     <ul>
                         <li><a href="#subpage1">Sub Page One</a></li>
                         <li><a href="#subpage2">Sub Page Two</a></li>
@@ -67,9 +68,9 @@ function clearText(field)
                         <li><a href="#subpage5">Sub Page Five</a></li>
                   	</ul>
                 </li>
-                <li><a href="checkout.html" class="selected">Checkout</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="faqs.php" class="selected">FAQs</a></li>
             </ul>
             <div id="templatemo_search">
                 <form action="#" method="get">
@@ -116,44 +117,34 @@ function clearText(field)
         </div>
     </div>
     
-    <div id="content" class="right">
-    	<h2>Checkout</h2>
-        
-		<h3>BILLING DETAILS</h3>
-        
-            <div class="content_half left form_field">
-				Full Name (must be the same as on credit card)
-                <input name="fullname" type="text" id="fullname" maxlength="40" />
-                Address:
-      			<input name="address" type="text" id="address" maxlength="40" />
-                City:
-                <input name="city" type="text" id="city" maxlength="40" />
-                Country:
-                <input name="country" type="text" id="country" maxlength="40" />
-            </div>
+    <div id="content" class="right faqs">
+		<h2>FAQs</h2>
+            <h5>How do I  know if my order has been placed?</h5>
+            <p>You will  receive an email confirming that your order has been received. If you do not  receive an email confirmation, please login to see your order status. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
             
-            <div class="content_half right form_field">
-            	Email:
-			  <input name="email" type="text" id="email" maxlength="40" />
-                Phone:<br />
-                <input name="phone" type="text" id="phone" maxlength="40" />
-                <span>Please, specify your reachable phone number to call you for a verification.</span>
-            </div>
+          <h5>When will my order be shipped?</h5>
+            <p>Please read our shipping policy. Click <a href="#">here</a></p>
             
+            <h5>What payment methods do you accept?</h5>
+            <p>PayPal and 2Checkout (2CO)</p>
+            
+            <h5>Can I return or exchange my purchase if I don't like it?</h5>
+            <p>Please read our exchange policy. Click <a href="#">here</a></p>
+            
+            <h5>How do I know if online ordering is secured?</h5>
+            <p>
+            Protecting your information is a  top priority for this site. We use Secure Sockets Layer (SSL) to encrypt your  credit card number, name and address, so only this site is able to decode  your information. SSL is the industry standard method for computers to  communicate securely without risk of data interception, manipulation or  recipient impersonation. To be sure your connection is secure; when you are in  the Shopping Cart, look at the lower corner of your browser window. If you see  an unbroken key or closed lock, the SSL is active and your information is  secure. Since most of the customers are still uncomfortable with providing your  credit card online, we use PayPal and 2CheckOut services and they do not need to  give out credit card information.</p>
+          <p>
+          This site is registerd with HackerGuardian. HackerGuardian certification for  a hacker free website and a Credit Card TrustLogo confirming your  trustworthiness to take credit card details online.</p>
+
+			
+            <h5>What is your privacy policy?</h5>
+            <p>This website respects your privacy and ensure that  you understand what information we need to complete your order, and what  information you can choose to share with us and with our marketing partners.  For complete information on our privacy policy, please visit our <a href="#">Privacy Policy</a>  page.</p>
             <div class="cleaner h40"></div>
-            
-            <h3>SHOPPING CARD</h3>
-            <h4>TOTAL: <strong>$560</strong></h4>
-			<p><input name="terms" type="checkbox" id="terms" />
-		    I have read and accept the <a href="#">Terms of Use</a>. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
-            <p><a href="#"><img src="images/1311260370_paypal-straight.png" alt="paypal" align="middle" /></a>&nbsp;(recommended if you have a PayPal account. Fastest way to complete your order.)</p>
-            <p><a href="#"><img src="images/flagship.jpg" alt="Flagship" align="middle" /></a>&nbsp;(free shipping for orders above $500)</p>
-            <div class="blank_box">
+        <div class="blank_box">
         	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
-        	</div>    
-        
+        </div>    
     </div>
-    
     <div class="cleaner"></div>
 </div> <!-- END of main -->
 </div> <!-- END of main wrapper -->
@@ -166,7 +157,7 @@ function clearText(field)
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
     </div>
 	<div class="footer_right">
-		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="faqs.html">FAQs</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>
+		<p><a href="index.php">Home</a> | <a href="products.php">Products</a> | <a href="about.php">About</a> | <a href="faqs.php">FAQs</a> | <a href="checkout.php">Checkout</a> | <a href="contact.php">Contact</a></p>
         <p>Copyright © 2084 <a href="#">Company Name</a></p>
 	</div>
     <div class="cleaner"></div>
