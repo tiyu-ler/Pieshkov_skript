@@ -44,10 +44,11 @@
     }
 ?>
 <body style="height:1100px">
+
 <div class="center">
-  <h1 style="margin-top:-10px;margin-bottom:30px">Floral</h1>
+  <h1 style="margin-top:20px;margin-bottom:30px;margin-left:40px">Floral</h1>
   <h2 style="text-align: center;margin-bottom:30px"><?= $_GET['action'] == 'new' ? 'Create' : 'Login' ?></h2>
-  <form style="padding-right: 24px" <?= $_GET['action'] == 'new' ? '' : 'action="index.php"' ?> method="post">
+  <form style="padding: 40px;width:325px" <?= $_GET['action'] == 'new' ? '' : 'action="index.php"' ?> method="post">
     <?php 
     if ($_GET['action'] == 'new') { 
       ?>
