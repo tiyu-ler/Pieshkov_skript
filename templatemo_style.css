@@ -40,7 +40,7 @@ em { color: #e1d620 }
 .img_fr { float: left; margin: 3px 0 5px 15px }
 .img_border { background: #fff; padding: 4px; border: 1px solid #eee }
 
-a:link, a:visited { color:#e79e05; text-decoration: none }
+a:link, a:visited { color:#646464; text-decoration: none }
 a:visited { text-decoration:none }
 a:hover { text-decoration:none }
 a:hover,a:active { outline:none }
@@ -205,14 +205,13 @@ cite span { font-weight: 400; color: #333; }
 	font-weight: 700;
 	margin-bottom: 10px;
 }
-.product_box .add_to_cart {
-	clear: both;
+.product_box .detail {
+	background-color: #3b3b3b;
 	width: 165px;
 	height: 28px;
-	background: url(images/addtocart.png) no-repeat
 }
 
-.product_box .add_to_cart a {
+.product_box .detail a {
 	float: left;
 	display: block;
 	width: 82px;
