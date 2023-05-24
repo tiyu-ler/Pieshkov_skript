@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
         {
             $email = addslashes($_POST['email']);
             unset($_GET['action']);
+            
             require_once ($_SERVER['DOCUMENT_ROOT'].'/class/Database.php');
             $mysqli = new Database();
             $mysqli->getConnection();
@@ -26,10 +28,9 @@
             }
             else
             {
-                $sql = "INSERT into user (firstName,  middleName, lastName, mobile, email, passwordHash,registeredAt) values 
+                $sql = "INSERT into user (firstName, lastName, mobile, email, passwordHash,registeredAt) values 
                 (
                         '".addslashes($_POST['firstName'])."',
-                        '".addslashes($_POST['middleName'])."',
                         '".addslashes($_POST['lastName'])."',
                         '".addslashes($_POST['mobile'])."',
                         '".addslashes($_POST['email'])."',
@@ -40,8 +41,10 @@
         }else{
           $error="Passwords aren`t equal";
         }
-        
-    }
+    }else{
+      session_destroy();
+      unset($_SESSION);
+  }
 ?>
 <body style="height:1100px">
 
@@ -55,10 +58,6 @@
     <div class="inputbox" style="margin-top:-10px;margin-bottom:35px;width:300px">
       <input name="firstName" type="text" required="required">
       <span>First Name</span>
-    </div>
-    <div class="inputbox" style="margin-top:-10px;margin-bottom:35px;width:300px">
-      <input name="middleName" type="text">
-      <span>Middle Name</span>
     </div>
     <div class="inputbox" style="margin-top:-10px;margin-bottom:35px;width:300px">
       <input name="lastName" type="text" required="required">

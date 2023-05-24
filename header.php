@@ -58,7 +58,7 @@ function clearText(field)
                     if ($_SESSION['user_id'])
                     {
                 ?>
-                <li><a class="nav-icon position-relative text-decoration-none" href="#">
+                <li><a class="nav-icon position-relative text-decoration-none" href="index.php?exit=1">
                         <i class="fa fa-fw fa-user mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">Log Out</span>
                     </a></li>
@@ -75,24 +75,16 @@ function clearText(field)
                 <?php
                     }
                 ?>
-                 <?php 
+                 <?php
                         if ($_SESSION['user']['admin'] == 1)
                         {
                         ?>
                        
                         <li class="nav-item"><a class="nav-link" href="admin.php">
-                            Admin
-                            panel
+                            Admin panel
                         </a></li>
                         <?php } ?>
             </ul>
-            <div id="templatemo_search">
-                <form action="#" method="get">
-                  	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
-                  			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
-                  	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
-                </form>
-            </div>
             <br style="clear: left" />
         </div> <!-- end of templatemo_menu -->
 

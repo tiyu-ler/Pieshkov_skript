@@ -18,7 +18,7 @@ class Database
 
         try {
             $this->conn = new mysqli ($this->host, $this->username, $this->password, $this->db_name);
-        } catch (PDOException $exception) {
+        } catch (Exception $exception) {
             echo "Error connection: " . $exception->getMessage();
         }
 
@@ -31,7 +31,7 @@ class Database
             $this->info = $this->conn->info;
             $this->insertId =$this->conn->insert_id;
             $this->num_rows = $this->result->num_rows;
-        } catch (PDOException $exception) {
+        } catch (Exception $exception) {
             echo "Error connection: " . $exception->getMessage();
         }
 
@@ -64,3 +64,4 @@ class Database
         }
     }
 }
+?>

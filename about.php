@@ -12,13 +12,12 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <div id="templatemo_main">
 	<div id="sidebar" class="left">
     	<div class="sidebar_box"><span class="bottom"></span>
-            <h3>Most popular</h3>   
+            <h3>Promotional activities</h3>   
             <div class="content"> 
                 <ul class="sidebar_list">
-                    <li><a href="productdetail.php?action=1">Ut eu feugiat</a></li>
-                    <li><a href="productdetail.php?action=3">Tristique Vitae</a></li>
-                    <li><a href="productdetail.php?action=4">Hendrerit Eu</a></li>
-                    <li><a href="productdetail.php?action=6">Curabitur et turpis</a></li>
+                    <li><a>Free shipping on order over 25$</a></li>
+                    <li><a>-10% on order over 50$</a></li>
+                    <li><a>ClubCard with special bonuses</a></li>
                 </ul>
             </div>
         </div>

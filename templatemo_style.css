@@ -184,7 +184,7 @@ cite span { font-weight: 400; color: #333; }
 
 .product_box {
 	float: left;
-	width: 165px;
+	width: 240px;
 	text-align: center;
 	margin: 0 10px 10px 0;
 	background: url(images/templatemo_h2.png) repeat
@@ -209,15 +209,6 @@ cite span { font-weight: 400; color: #333; }
 	background-color: #3b3b3b;
 	width: 165px;
 	height: 28px;
-}
-
-.product_box .detail a {
-	float: left;
-	display: block;
-	width: 82px;
-	line-height: 28px;
-	text-align: center;
-	color: #333
 }
 
 a.button {
