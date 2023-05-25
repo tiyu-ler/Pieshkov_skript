@@ -1,13 +1,13 @@
 <?php session_start();  
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php");
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php"); ?>
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php"); //берем путь от корня папки
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php"); //берем путь от корня папки?>  
 <!-- templatemo 385 floral shop -->
 <!-- 
 Floral Shop Template 
 http://www.templatemo.com/preview/templatemo_385_floral_shop 
 -->
 <body>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php");//берем путь от корня папки ?> 
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
 	<div id="sidebar" class="left">
@@ -39,6 +39,6 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
     <div class="cleaner"></div>
 </div> <!-- END of main -->
 </div> <!-- END of main wrapper -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php");//берем путь от корня папки ?> 
 </body>
 </html>

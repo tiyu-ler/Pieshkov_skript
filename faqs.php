@@ -7,7 +7,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php");//берем путь от корня папки ?> 
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
 	<div id="sidebar" class="left">
@@ -54,6 +54,6 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
     <div class="cleaner"></div>
 </div> <!-- END of main -->
 </div> <!-- END of main wrapper -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php");//берем путь от корня папки ?> 
 </body>
 </html>

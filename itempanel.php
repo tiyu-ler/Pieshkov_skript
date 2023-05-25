@@ -1,6 +1,6 @@
 <?php session_start();
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php");
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php");
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php"); //берем путь от корня папки
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php"); //берем путь от корня папки
 $product = new Product ($_GET['id']);
 
 if ($_POST['Send'])
@@ -63,5 +63,6 @@ $product->saveData($_POST);
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/item.css">
     <?php $product->displayInput();
 ?>

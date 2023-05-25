@@ -1,34 +1,43 @@
 <?php 
 session_start();
-require_once ($_SERVER['DOCUMENT_ROOT'].'/class/Database.php');
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php");
+require_once ($_SERVER['DOCUMENT_ROOT'].'/class/Database.php'); //берем путь от корня папки
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php"); //берем путь от корня папки
 if ($_POST['email'] && $_POST['password'])
 {
-    $email=addslashes($_POST['email']);
-    $password=md5($_POST['password']);
-    $_POST['password']. "=" .$password;
-    $mysqli = new Database;
-     $mysqli->getConnection();
-     $sql = "Select * from user where email ='$email' and passwordHash='$password';";
-     $mysqli->runQuery($sql);
-     if ($mysqli->num_rows == 1)
-     {
-        $_SESSION['user'] = $mysqli->getRow();
-        $_SESSION['user_id'] = $_SESSION['user']['id'];
-      //  var_dump($_SESSION);
-     }
-     else
-     {
-        session_destroy();
-        unset($_SESSION);
-      //  var_dump($_SESSION);
-     }
+    // Если присутствуют значения для email и password
+    $email = addslashes($_POST['email']); // Экранирование специальных символов в email
+    $password = md5($_POST['password']); // Хэширование пароля с использованием MD5
+
+    $_POST['password'] .= "=" . $password; // Добавление хэшированного пароля к строке в $_POST
+
+    $mysqli = new Database; // Создание объекта базы данных
+    $mysqli->getConnection(); // Установка соединения с базой данных
+
+    $sql = "SELECT * FROM user WHERE email = '$email' AND passwordHash = '$password';"; // SQL-запрос для выборки пользователя по email и паролю
+    $mysqli->runQuery($sql); // Выполнение SQL-запроса
+
+    if ($mysqli->num_rows == 1)
+    {
+        // Если найдена одна строка, то пользователь существует
+        $_SESSION['user'] = $mysqli->getRow(); // Сохранение данных пользователя в сессию
+        $_SESSION['user_id'] = $_SESSION['user']['id']; // Сохранение ID пользователя в сессию
+    }
+    else
+    {
+        // Если пользователь не найден
+        session_destroy(); // Уничтожение сессии
+        unset($_SESSION); // Очистка массива $_SESSION
+    }
 }
-if ($_GET['exit']==1){
-    session_destroy();
-    unset($_SESSION);
+
+if ($_GET['exit'] == 1)
+{
+    // Если присутствует параметр exit в URL и равен 1
+    session_destroy(); // Уничтожение сессии
+    unset($_SESSION); // Очистка массива $_SESSION
 }
 ?>
+
 <!-- templatemo 385 floral shop -->
 <!-- 
 Floral Shop Template 
@@ -37,7 +46,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php"); //берем путь от корня папки?>  
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
 	<div id="sidebar" class="left">
@@ -63,11 +72,11 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
                      $sql= "Select id from product";
                      $mysqli = new Database ();
                      $mysqli->getConnection();
-                     $dat = $mysqli->getArray($sql);
-                     foreach ($dat as $val)
+                     $dat = $mysqli->getArray($sql); //записиваем в $dat массив массивов
+                     foreach ($dat as $val) //перебераем
                      {
-                        $Product[$val['id']] = new Product ($val['id']);
-                        $Product[$val['id']]->displayCard('noadmin');
+                        $Product[$val['id']] = new Product ($val['id']); //создаем обьект класса датабази
+                        $Product[$val['id']]->displayCard('noadmin'); //показиваем карточку с атрибутом, что уберет кнопки админа
 
 
                      }?>
@@ -80,6 +89,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
     <div class="cleaner"></div>
 </div> <!-- END of main -->
 </div> <!-- END of main wrapper -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php"); //берем путь от корня папки?> 
+
 </body>
 </html>

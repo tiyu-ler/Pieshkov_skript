@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); //создаем $_SESSION ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +16,7 @@
             $email = addslashes($_POST['email']);
             unset($_GET['action']);
             
-            require_once ($_SERVER['DOCUMENT_ROOT'].'/class/Database.php');
+            require_once ($_SERVER['DOCUMENT_ROOT'].'/class/Database.php'); //берем путь от корня папки
             $mysqli = new Database();
             $mysqli->getConnection();
            
@@ -42,8 +42,8 @@
           $error="Passwords aren`t equal";
         }
     }else{
-      session_destroy();
-      unset($_SESSION);
+      session_destroy(); //отключение от сессии
+      unset($_SESSION); //очищение переменной
   }
 ?>
 <body style="height:1100px">
@@ -51,7 +51,7 @@
 <div class="center">
   <h1 style="margin-top:20px;margin-bottom:30px;margin-left:40px">Floral</h1>
   <h2 style="text-align: center;margin-bottom:30px"><?= $_GET['action'] == 'new' ? 'Create' : 'Login' ?></h2>
-  <form style="padding: 40px;width:325px" <?= $_GET['action'] == 'new' ? '' : 'action="index.php"' ?> method="post">
+  <form style="padding: 40px;width:325px" <?= $_GET['action'] == 'new' ? '' : 'action="index.php"' // $_GET визуально(в строке запроса - атрибут) ?> method="post"> 
     <?php 
     if ($_GET['action'] == 'new') { 
       ?>
@@ -86,7 +86,7 @@
     <div class="inputbox" style="margin-top:-10px;margin-bottom:35px;width:300px">
       <input type="submit" value="<?= $_GET['action'] == 'new' ? 'Create' : 'Login' ?>">
     </div>
-    <?= $_GET['action'] == 'new' ? ' <a href="?">Return to login</a>' : ' <a href="?action=new">Create new account</a>' ?> 
+    <?= $_GET['action'] == 'new' ? ' <a href="?">Return to login</a>' : ' <a href="?action=new">Create new account</a>' //тернальний оператор if?> 
     </div>
   </form>
 </div>

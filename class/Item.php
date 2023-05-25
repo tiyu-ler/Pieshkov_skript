@@ -9,29 +9,28 @@ class Product
     private $images;
     public $research;
 
-    public function __construct($id='')
+    public function __construct($id='') //виполняется обязательно при создании обьекта...
     {
-        
         if ($id)
         {
-            $this->id = $id;
-            $this->getData();
+            $this->id = $id; //
+            $this->getData(); //
         }
     }
-    private function getData()
+    private function getData() 
     {
         $mysqli = new Database();
         $sql = "Select * from product where id=".$this->id;
-        $mysqli->getConnection();
+        $mysqli->getConnection(); 
         $mysqli->runQuery($sql);
         if ($mysqli->num_rows == 1)
         {
-            $this->research = $mysqli->getRow();
-            $this->price = $this->research['price'];
-            $this->title = $this->research['title'];
-            $this->title = $this->research['discount'];
-            $this->quantity = $this->research['quantity'];
-            $this->images = $this->research['images'];
+            $this->research = $mysqli->getRow(); //
+            $this->price = $this->research['price']; //
+            $this->title = $this->research['title']; //
+            $this->title = $this->research['discount']; //
+            $this->quantity = $this->research['quantity']; //
+            $this->images = $this->research['images']; //
         }
         
     }
@@ -47,19 +46,19 @@ class Product
 
                     </div>
                     <div class = "mt-3">
-                    <label for="title">Set Title</label>
+                    <label for="title" class="first">Set Title</label>
                      <input type="text" id="title" name="title"  value="<?= $this->research['title'] ?>" />
                     </div>
                     
 
                     <div class = "mt-3">
                     <label for="price">Set Price</label>
-                     <input  type="number"  id="price"  name="price" value="<?= $this->research['price'] ?>" min='0' max='99' />
+                     <input  type="number"  id="price"  name="price" value="<?= $this->research['price'] ?>"/>
                     </div>
 
                     <div class = "mt-3">
                     <label for="price">Set Discount</label>
-                     <input  type="number"  id="discount"  name="discount" value="<?= $this->research['discount'] ?>" step ="0.01" />
+                     <input  type="number"  id="discount"  name="discount" value="<?= $this->research['discount'] ?>" step ="0.01" min='0' max='99'  />
                     </div>
 
                     <div class = "mt-3">
@@ -89,13 +88,13 @@ class Product
 </div>
 <?php
     }
-    public function saveData($data)
+    public function saveData($data) //
     {
-        if ($data['id'])
+        if ($data['id']) //
         {
-            if (file_exists($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']) && $_POST['image_URL'])
+            if (file_exists($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']) && $_POST['image_URL']) //
             { 
-                unlink($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']);
+                unlink($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']); //
             }
             $sql = "UPDATE product set ";
         }
@@ -103,21 +102,21 @@ class Product
         {
             $sql = "INSERT into product set ";
         }
-        foreach ($data as $key => $val)
+        foreach ($data as $key => $val) //
         {
-            if ($key != 'id' && $key != 'Send')
+            if ($key != 'id' && $key != 'Send') //
             {
-                $sql .= $key . "='".addslashes($val)."', ";
+                $sql .= $key . "='".addslashes($val)."', "; //
             }
         }
-         $sql .= " userId=".$_SESSION['user_id']." ";
+         $sql .= " userId=".$_SESSION['user_id']." "; //
         
          
-       if ($data['id'])
+       if ($data['id']) //
        {
-         $sql .= ", updatedAt=now() where id=".$data['id'];
+         $sql .= ", updatedAt=now() where id=".$data['id']; //
        }
-       else $sql .= ", createdAt=now()";
+       else $sql .= ", createdAt=now()"; //
        $mysqli = new Database();
        $mysqli->getConnection();
        $mysqli->runQuery($sql);
@@ -126,7 +125,7 @@ class Product
     {
         if (file_exists($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']))
         { 
-            unlink($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']);
+            unlink($_SERVER['DOCUMENT_ROOT'].$this->research['image_URL']); //
         }
         
        $mysqli = new Database();
@@ -150,7 +149,7 @@ class Product
             <p class="product_price"><?= round($this->research['price']*(100- $this->research['discount'])/100,2 )?> $</p>
             <?php if (!$atribute) { ?>
             <p style="background-color:#e3e3e3">
-                <a style="text-decoration: none; color:#3b3b3b; font-size:14px" onclick="window.open('/itempanel.php?id=<?= $this->research['id'] ?>', 'edit', 'left=200,top=100,height=400,width=600')">Change</a>
+                <a style="text-decoration: none; color:#3b3b3b; font-size:14px" onclick="window.open('/itempanel.php?id=<?= $this->research['id'] ?>', 'edit', 'left=200,top=100,height=700,width=600')">Change</a>
             </p>
             <p style="background-color:#e3e3e3">
                 <a style="text-decoration: none; color:#3b3b3b; font-size:14px" onclick="window.open('/delete.php?id=<?= $this->research['id'] ?>', 'edit', 'left=200,top=100,height=100,width=100')">Delete</a>

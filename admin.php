@@ -1,13 +1,13 @@
 <?php session_start(); 
- require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php");
-require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php");
+ require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Database.php"); //берем путь от корня папки
+require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php"); //берем путь от корня папки
  ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 
 <body>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/header.php");//берем путь от корня папки ?>
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
 	<div id="sidebar" class="left">
@@ -24,14 +24,14 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php");
     <div id="content" class="right">
 		<h2>Welcome to control panel</h2>      
         <?php
-            $sql= "Select id from product";
-            $mysqli = new Database ();
-            $mysqli->getConnection();
-            $dat = $mysqli->getArray($sql);
-            foreach ($dat as $val)
+            $sql= "Select id from product"; //запрос по которому ми випишем айди
+            $mysqli = new Database ();  //создаем новий обект дб
+            $mysqli->getConnection(); //подключаемся к дб
+            $dat = $mysqli->getArray($sql); //берет все айди из продукта (масив)
+            foreach ($dat as $val) //переберает строки (масив дат)
             {
-               $Product[$val['id']] = new Product ($val['id']);
-               $Product[$val['id']]->displayCard('');
+               $Product[$val['id']] = new Product ($val['id']); //для каждого айди создаем обьект Продукт
+               $Product[$val['id']]->displayCard(''); //для каждого обьекта Продут виполняем функцию 
             }
         ?>
     </div>
@@ -40,5 +40,5 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/class/Item.php");
 </div> <!-- END of main wrapper -->
 
 </body>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php") ?> 
+<?php require_once ($_SERVER['DOCUMENT_ROOT']."/footer.php");//берем путь от корня папки ?> 
 </html>
